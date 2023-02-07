@@ -55,6 +55,12 @@ footer {
     Utility Classes
    */
 
+
+.active {
+    color: var(--bs-secondary);
+    transition: .2s;
+}
+
 .text-sm {
     font-size: 0.9rem;
 }
@@ -163,7 +169,8 @@ footer {
 .heading {
     font-size: 60px;
     font-weight: bold;
-    color: blue;
+    color: #4a5aee;
+
 }
 
 #my-services .service:hover a,

@@ -1,11 +1,31 @@
+const navLinks = document.querySelectorAll(".nav-link");
+
+function navClickHandler(e) {
+  const clickedBtn = e.target;
+
+  navLinks.forEach((btn) => {
+    btn.classList.remove("active");
+  });
+
+  clickedBtn.classList.add("active");
+}
+
+navLinks.forEach(function (link) {
+  link.addEventListener("click", navClickHandler);
+});
+
 const filtersBtns = document.querySelectorAll("#latest-projects [data-filter]");
 const projects = document.querySelectorAll("#latest-projects [data-cat]");
 
 function filterClickHandler(e) {
   const clickedBtn = e.target;
-
   const filter = clickedBtn.getAttribute("data-filter");
 
+  filtersBtns.forEach((btn) => {
+    btn.classList.remove("active");
+  });
+
+  clickedBtn.classList.add("active");
   const relatedProjects = document.querySelectorAll(
     `#latest-projects [data-cat="${filter}"]`
   );
